@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Considerar somente esse trecho de código para o desafio do LeetCode.
+//Considerar somente esse trecho de código para o desafio do LeetCode
 class Solution {
 public:
     string intToRoman(int num) {
@@ -18,11 +18,11 @@ public:
 
         string concatRomanChars;
         while(num > 0) {
-            for (int i = 0; i < 13; i++) {
+            for (int i = 0; i < sizeof(decimalNums); i++) {
                 if (num >= decimalNums[i]) {
                     concatRomanChars += romanNums[i];
                     num -= decimalNums[i];
-                    break;
+                    break; //Break para evitar bad alloc e repetir a condição if num mesmo indice até que não seja mais possíve
                 }
             }
         }
@@ -31,7 +31,7 @@ public:
 };
 
 
-// Teste local, para uso na plataforma leetcode, ignorar função main.
+//Teste local, para uso na plataforma leetcode, ignorar função main
 int main() {
     cout << Solution().intToRoman(/*adicione ou altere número aqui p testar em ambiente local*/3749) << endl;
     return 0;
