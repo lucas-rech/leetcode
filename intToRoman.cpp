@@ -1,7 +1,15 @@
+/*
+    Link do desafio: https://leetcode.com/problems/integer-to-roman/description/
+    Autor da solução: Lucas Rech
+
+    Data de criação: 31/07/2025
+*/
+
 #include <iostream>
 
 using namespace std;
 
+// Considerar somente esse trecho de código para o desafio do LeetCode.
 class Solution {
 public:
     string intToRoman(int num) {
@@ -22,7 +30,9 @@ public:
     }
 };
 
+
+// Teste local, para uso na plataforma leetcode, ignorar função main.
 int main() {
-    cout << Solution().intToRoman(3749) << endl;
+    cout << Solution().intToRoman(/*adicione ou altere número aqui p testar em ambiente local*/3749) << endl;
     return 0;
 }
